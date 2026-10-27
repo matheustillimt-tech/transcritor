@@ -27,6 +27,27 @@ Se usar o fn, vá em Ajustes do Sistema › Teclado e deixe **“Pressionar a te
 
 Clicar no widget **não tira o foco** do app onde você está digitando.
 
+## Instalar com o Claude Code
+
+Abra o Claude (aba Code) numa pasta qualquer do seu Mac e cole:
+
+```
+Quero instalar o Transcritor, o ditado por voz 100% local do Grupo Vórtex, no meu Mac.
+
+1. Confira se este Mac tem chip Apple Silicon (M1, M2, M3...). Se não tiver, me avise que vai funcionar mais devagar e pergunte se eu quero seguir.
+2. Confira se eu tenho o Git. Se não tiver, instale comigo.
+3. Baixe o código: git clone https://github.com/matheustillimt-tech/transcritor.git e entre na pasta transcritor.
+4. Leia o README.md e o INSTALACAO.md.
+5. Rode o ./install.sh no meu terminal. Ele instala as ferramentas da Apple, o Homebrew, o whisper-cpp e baixa o modelo (cerca de 1,6 GB). Me avise antes do download grande e do que pedir a senha do Mac (a senha eu digito no terminal, nunca aqui no chat).
+6. Quando o app abrir, me guie pra liberar as 2 permissões: Microfone e Acessibilidade (Ajustes do Sistema › Privacidade e Segurança › Acessibilidade › Transcritor).
+7. Me ajude a deixar a tecla 🌐 (fn) como "Não fazer nada" em Ajustes do Sistema › Teclado.
+8. Faça um teste comigo: eu seguro o fn, falo uma frase e confiro se o texto apareceu onde está o cursor.
+
+Regras: fale comigo em português simples (sou dono de negócio, não programador), um passo de cada vez, esperando eu terminar antes de seguir.
+```
+
+O passo a passo manual está no [INSTALACAO.md](INSTALACAO.md).
+
 ## Instalar / compilar
 
 Num Mac novo, um comando instala tudo (Command Line Tools, Homebrew, `whisper-cpp` e o modelo de ~1,6 GB em `~/.cache/whisper-models/`), compila e abre o app:
@@ -48,3 +69,7 @@ Na primeira vez, o macOS vai pedir:
 - **Vocabulário** (botão direito): cadastre nomes próprios, marcas e termos seus (ex.: `uai, trem, Uberlândia, pão de queijo, Kubernetes`). Isso ajuda muito o Whisper.
 - Fale a uns 15–30 cm do microfone. Fala rápida e "palavras comidas" funcionam bem, porque o modelo usa beam search.
 - Log do motor: `~/Library/Logs/Transcritor/whisper-server.log`.
+
+## Licença
+
+MIT. Feito pelo Grupo Vórtex · entregue na Plataforma Vórtex IA.
